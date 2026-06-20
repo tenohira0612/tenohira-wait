@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>テノヒラ-待って</title>
+
+<style>
+body{
+    font-family: sans-serif;
+    background:#f5f5f5;
+    margin:0;
+    padding:30px;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    font-size:18px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    font-size:18px;
+    background:#2d89ef;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.result{
+    margin-top:25px;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>テノヒラ-待って</h1>
+
+<label>診察中の番号</label>
+<input id="current" type="number">
+
+<label>自分の番号</label>
+<input id="mine" type="number">
+
+<button onclick="calc()">計算する</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<script>
+function calc(){
+
+let current=Number(document.getElementById("current").value);
+let mine=Number(document.getElementById("mine").value);
+
+let remain=mine-current;
+
+if(remain<=0){
+document.getElementById("result").innerHTML="順番です！";
+return;
+}
+
+let minutes=remain*5;
+
+document.getElementById("result").innerHTML="あと約 "+minutes+" 分";
+}
+</script>
+
+</body>
+</html>
