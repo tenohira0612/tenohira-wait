@@ -92,7 +92,7 @@ return;
 }
 
 let per=Number(document.getElementById("per").value);
-
+localStorage.setItem("per", per);
 let minutes=remain*per;
 document.getElementById("result").innerHTML=
 "あと <br><span style='font-size:40px;'>"+remain+
