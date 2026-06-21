@@ -79,6 +79,10 @@ button{
 </div>
 
 <script>
+window.onload = function(){
+  let savedPer = localStorage.getItem("per");
+  if(savedPer){document.getElementById("per").value = savedPer;}
+}
 function calc(){
 let savedPer = localStorage.getItem("per");
 if(savedPer){document.getElementById("per").value = savedPer;}
