@@ -98,6 +98,7 @@ return;
 
 let per=Number(document.getElementById("per").value);
 localStorage.setItem("per", per);
+   if(per<=0){per=15;} 
 let minutes=remain*per;
 let hours = Math.floor(minutes / 60);
 let mins = minutes % 60;
