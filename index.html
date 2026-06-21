@@ -90,8 +90,9 @@ document.getElementById("result").innerHTML="順番です！";
 return;
 }
 
-let minutes=remain*5;
+let per=Number(document.getElementById("per").value);
 
+let minutes=remain*per;
 document.getElementById("result").innerHTML=
 "あと <br><span style='font-size:40px;'>"+remain+
 " 人</span><br><br>予想待ち時間<br><span style='color:#2d89ef;'>約 "+
