@@ -98,6 +98,9 @@ return;
 let per=Number(document.getElementById("per").value);
 localStorage.setItem("per", per);
 let minutes=remain*per;
+let hours = Math.floor(minutes / 60);
+let mins = minutes % 60;
+let timeText = hours > 0 ? `${hours}時間${mins}分` : `${mins}分`;
 document.getElementById("result").innerHTML=
 "あと <br><span style='font-size:40px;'>"+remain+
 " 人</span><br><br>予想待ち時間<br><span style='color:#2d89ef;'>約 "+
